@@ -15,6 +15,12 @@ body {
     padding: 50px 0;
   }
   
+  header img {
+    display: block;
+    margin: 0 auto 20px; /* Adjust margin as needed */
+    width: 200px; /* Adjust width as needed */
+  }
+
   .container {
     width: 80%;
     margin: auto;
