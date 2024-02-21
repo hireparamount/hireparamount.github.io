@@ -1,21 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting...</title>
-  <script>
-    // Redirect logic
-    window.onload = function() {
-      if (window.location.href === 'https://www.hireparamount.github.io') {
-        window.location.href = 'https://www.hireparamount.com/'; 
-      } else {
-        window.location.href = 'SpecsAnalyzer.html';
-      }
-    }
-  </script>
+  <title>Paramount Staffing App</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Optional:  message for users before redirecting -->
-  <p>Redirecting...</p>
+  <header>
+    <img src="images/company_logo.png" alt="Paramount Logo">
+    <h1>Paramount Computer Diagnostic</h1>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <p>
+        This application is a computer diagnostic assessment that will evaluate computer specifications to ensure it meets the required criteria for your work-at-home job opportunity.  
+        <br><br>How long will it take? approx. 5 – 10 minutes.  
+      </p>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="container">
+      <h2>Ready to start?</h2>
+      <ul>
+        <li>
+          <h3>Download the Diagnostic App</h3>
+          <a href="app.exe" download="Paramount Computer Diagnostic.exe" class="btn">
+            <i class="fas fa-download"></i> Click Here
+          </a>
+          <p>
+            Your download should start automatically, if you are having trouble please <a href="app.exe" download="Paramount Computer Diagnostic.exe">try again</a>.
+            <br><br>
+            After downloading, please utilize the email address that sent you this link.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section id="troubleshooting">
+    <div class="container">
+      <h2>Troubleshooting</h2>
+      <p>
+        Common issues such as connectivity errors, system compatibility, and their solutions.
+        <ul>
+
+          <li>
+            <h3>No Internet Connection</h3>
+            <p>This is the most common error message that pops up. Please check your internet connection and relaunch the app. Make sure you are hardwired.</p>
+            <img src="/images/troubleshooting_no_internet.png" alt="No Internet Error">
+          </li>
+
+          <li>
+            <h3>Incorrect Email</h3>
+            <p>If this issue pops up, please recheck your email and try again. Use your email that has been associated with us.</p>
+            <img src="/images/troubleshooting_incorrect_email.png" alt="No Internet Error">
+          </li>
+
+        </ul>
+        If there are any further issues, please reach out to us at <a href="mailto:support@hireparamount.com">support@hireparamount.com</a>.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Thank you for working with us!</p>
+    <a href="privacyPolicy.html">Privacy Policy</a>
+    <br>
+    <a href="https://www.hireparamount.com/">Visit our main website</a>
+    <p>&copy; 2023 Paramount Staffing. All rights reserved.</p>
+  </footer>
 </body>
 </html>
