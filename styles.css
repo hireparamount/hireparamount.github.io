@@ -44,5 +44,19 @@ body {
     background-color: #777;
   }
   
+/* Styles for the footer links */
+footer a {
+  color: #fff; /* Change link color to white */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the font bold */
+  font-family: Arial, sans-serif; /* Use a fallback font */
+}
+
+/* Style for hovered links */
+footer a:hover {
+  color: #ccc; /* Change link color on hover */
+}
+
+
   /* Other styles can be added for different sections, headings, paragraphs, etc. */
   
