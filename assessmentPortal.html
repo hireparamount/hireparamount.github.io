@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramount Assessment Portal</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #165d83;
+        }
+
+        /* Center-align the title and logo container */
+        .title-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .title-container img {
+            margin-top: 10px; /* Space between the title and logo */
+            width: 180px; /* Adjust this value to make the logo bigger */
+            height: auto; /* Keeps the aspect ratio of the image */
+        }
+
+
+        /* Main content */
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        /* Section title */
+        .section-title {
+            color: #ddd;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        /* Card styling */
+        .assessment-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .assessment-card h3 {
+            margin-bottom: 10px;
+            color: #2a2a2a;
+        }
+
+        .assessment-card p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .assessment-card ul {
+            padding-left: 25px; /* Adjust this value for more space */
+        }
+
+        .section-title {
+            color: #ffffff; /* Make it brighter to stand out */
+            font-size: 1.5em; /* Increase the font size */
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+            text-decoration: underline; /* Underline the text */
+        }
+
+
+        /* Link and copy button styling */
+        .link-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .link-container a {
+            color: #1e90ff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .copy-button {
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        .copy-button:hover {
+            background-color: #4682b4;
+        }
+
+        /* Tooltip styling */
+        .tooltip {
+            display: none;
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #28a745; /* Green background color */
+            color: white;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="title-container">
+            <h1>Paramount Assessment Portal</h1>
+            <img src="images/logo.png" alt="Paramount Logo">
+        </div>
+        <h2>Access, complete, and track all assessments required for Paramount's hiring process.</h2>
+
+        <!-- Assessments Section -->
+        <div class="section-title">Assessments</div>
+
+        <!-- Typing Assessment -->
+        <div class="assessment-card">
+            <h3>Paramount Typing Assessment</h3>
+            <p>Measures typing speed and accuracy through a 1-minute and a 5-minute test. Candidates have unlimited attempts to improve their scores, with highlights indicating errors and word progression. The goal is to achieve the highest possible words per minute (WPM) with accuracy. After completing both tests at least once, candidates can submit their best scores to Paramount.</p>
+            <div class="link-container">
+                <a href="http://paramountapi.eastus.cloudapp.azure.com:3000/" target="_blank">Access Typing Assessment</a>
+                <button class="copy-button" onclick="copyToClipboard('http://paramountapi.eastus.cloudapp.azure.com:3000/', this)">Copy Link</button>
+                <span class="tooltip">Copied!</span>
+            </div>
+        </div>
+
+        <!-- Computer Assessment -->
+        <div class="assessment-card">
+            <h3>Paramount Computer Assessment</h3>
+            <p>Evaluates essential computer skills, including navigation of video meetings, web browsers, and basic system settings. Candidates answer 25 questions with up to 3 attempts per question. Includes a sample question to familiarize candidates with the assessment format.</p>
+            <div class="link-container">
+                <a href="http://paramountapi.eastus.cloudapp.azure.com:4000/" target="_blank">Access Computer Assessment</a>
+                <button class="copy-button" onclick="copyToClipboard('http://paramountapi.eastus.cloudapp.azure.com:4000/', this)">Copy Link</button>
+                <span class="tooltip">Copied!</span>
+            </div>
+        </div>
+
+        <!-- Comprehension Assessment -->
+        <div class="assessment-card">
+            <h3>Paramount Comprehension Assessment</h3>
+            <p>Assesses understanding of key insurance concepts such as risk management, policy types, and policyholder responsibilities. Candidates receive a PDF study guide and must answer 30 questions based on the material. Each attempt offers a new set of questions, with up to three attempts allowed. Paramount will notify candidates if retakes are necessary.</p>
+            <div class="link-container">
+                <a href="http://paramountapi.eastus.cloudapp.azure.com:5000/" target="_blank">Access Comprehension Assessment</a>
+                <button class="copy-button" onclick="copyToClipboard('http://paramountapi.eastus.cloudapp.azure.com:5000/', this)">Copy Link</button>
+                <span class="tooltip">Copied!</span>
+            </div>
+        </div>
+
+        <!-- Sales & Customer Service Assessment -->
+        <div class="assessment-card">
+            <h3>Sales & Customer Service Assessment</h3>
+            <p>Consists of 14 multiple-choice questions that assess knowledge and skills relevant to sales and customer service roles.</p>
+            <div class="link-container">
+                <a href="http://paramountapi.eastus.cloudapp.azure.com:6001/" target="_blank">Access Sales & Customer Service Assessment</a>
+                <button class="copy-button" onclick="copyToClipboard('http://paramountapi.eastus.cloudapp.azure.com:6001/', this)">Copy Link</button>
+                <span class="tooltip">Copied!</span>
+            </div>
+        </div>
+
+        <!-- Internet Speed Test -->
+        <div class="assessment-card">
+            <h3>Internet Speed Test</h3>
+            <p>Check internet speed to ensure it meets the requirements for remote work performance.</p>
+            <div class="link-container">
+                <a href="https://speedtest.jollywater-cbf1aca1.eastus.azurecontainerapps.io/" target="_blank">Access Internet Speed Test</a>
+                <button class="copy-button" onclick="copyToClipboard('https://speedtest.jollywater-cbf1aca1.eastus.azurecontainerapps.io/', this)">Copy Link</button>
+                <span class="tooltip">Copied!</span>
+            </div>
+        </div>
+
+        <!-- Computer Diagnostic Tool -->
+        <div class="assessment-card">
+            <h3>Paramount Computer Diagnostic</h3>
+            <p>Analyzes computer specifications to verify compatibility with the technical requirements for remote work opportunities. Estimated completion time: 5–10 minutes.</p>
+            <div class="link-container">
+                <a href="https://www.hireparamount.com/computer-diagnostic" target="_blank">Access Computer Diagnostic Tool</a>
+                <button class="copy-button" onclick="copyToClipboard('https://www.hireparamount.com/computer-diagnostic', this)">Copy Link</button>
+                <span class="tooltip">Copied!</span>
+            </div>
+        </div>
+
+
+        <!-- Hub Section -->
+        <div class="section-title">Assessment Hubs</div>
+        <div class="assessment-card">
+            <h3>Sales & Customer Service Assessment Hub</h3>
+            <p>A comprehensive hub to complete and track all required assessments. This hub includes:</p>
+            <ul>
+                <li>Typing Assessment</li>
+                <li>Computer Assessment</li>
+                <li>Comprehension Assessment</li>
+                <li>Sales & Customer Service Assessment</li>
+                <li>Internet Speed Test</li>
+            </ul>
+            <div class="link-container">
+                <a href="http://paramountapi.eastus.cloudapp.azure.com:6002/" target="_blank">Access Assessment Hub</a>
+                <button class="copy-button" onclick="copyToClipboard('http://paramountapi.eastus.cloudapp.azure.com:6002/', this)">Copy Link</button>
+                <span class="tooltip">Copied!</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function copyToClipboard(link, button) {
+            navigator.clipboard.writeText(link).then(() => {
+                const tooltip = button.nextElementSibling;
+                tooltip.style.display = "inline";
+                setTimeout(() => {
+                    tooltip.style.display = "none";
+                }, 1500);
+            }).catch(err => {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
