@@ -1,49 +1,50 @@
 /* Basic styles for the layout */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-  }
-  
-  header, footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 50px 0;
-  }
-  
-  header img {
-    display: block;
-    margin: 0 auto 20px; /* Adjust margin as needed */
-    width: 200px; /* Adjust width as needed */
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
 
-  .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  /* Styles for buttons and other elements */
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #555;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #777;
-  }
-  
+header, footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+}
+
+header img {
+  display: block;
+  margin: 0 auto 20px; /* Adjust margin as needed */
+  width: 200px; /* Adjust width as needed */
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Styles for buttons and other elements */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+}
+
+.btn:hover {
+  background-color: #777;
+}
+
 /* Styles for the footer links */
 footer a {
   color: #fff; /* Change link color to white */
@@ -52,11 +53,103 @@ footer a {
   font-family: Arial, sans-serif; /* Use a fallback font */
 }
 
-/* Style for hovered links */
 footer a:hover {
   color: #ccc; /* Change link color on hover */
 }
 
+/* Executables Portal Styles */
 
-  /* Other styles can be added for different sections, headings, paragraphs, etc. */
-  
+#executables {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+#executables h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#executables p {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.executables-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.executable-item {
+  background-color: #f9f9f9;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.executable-item h3 {
+  margin-bottom: 10px;
+  color: #165d83;
+}
+
+.executable-item p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.executable-links {
+  display: flex;
+  justify-content: center; /* Center the button */
+  gap: 10px;
+}
+
+.executable-links .btn {
+  /* Flex properties are no longer necessary since there's only one button */
+  /* Removed flex: 1 and text-align: center */
+}
+
+/* Navigation Styles */
+
+nav {
+  margin-top: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ccc;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .executables-list {
+      padding: 0 20px;
+  }
+
+  .executables-links {
+      flex-direction: column;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
