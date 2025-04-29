@@ -31,7 +31,6 @@
             height: auto; /* Keeps the aspect ratio of the image */
         }
 
-
         /* Main content */
         main {
             max-width: 800px;
@@ -47,11 +46,13 @@
 
         /* Section title */
         .section-title {
-            color: #ddd;
+            color: #ffffff; /* Make it brighter to stand out */
+            font-size: 1.5em; /* Increase the font size */
             text-align: center;
-            margin-top: 20px;
+            margin-top: 30px;
             margin-bottom: 20px;
-            font-size: 1.2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+            text-decoration: underline; /* Underline the text */
         }
 
         /* Card styling */
@@ -77,17 +78,6 @@
         .assessment-card ul {
             padding-left: 25px; /* Adjust this value for more space */
         }
-
-        .section-title {
-            color: #ffffff; /* Make it brighter to stand out */
-            font-size: 1.5em; /* Increase the font size */
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-            text-decoration: underline; /* Underline the text */
-        }
-
 
         /* Link and copy button styling */
         .link-container {
@@ -138,9 +128,31 @@
         <!-- Assessments Section -->
         <div class="section-title">Assessments</div>
 
+        <!-- Video Interview -->
+        <div class="assessment-card">
+            <h3>Video Interview</h3>
+            <p>A web platform where job candidates record video interview responses after email-based authentication against Bullhorn. The system stores these videos, allows internal reviewers to evaluate them, and integrates with Bullhorn to retrieve questions and post review feedback.</p>
+            <div class="link-container">
+                <a href="https://hireparamount.eastus.cloudapp.azure.com/videoInterview/" target="_blank">Access Video Interview</a>
+                <button class="copy-button" onclick="copyToClipboard('https://hireparamount.eastus.cloudapp.azure.com/videoInterview/', this)">Copy Link</button>
+                <span class="tooltip">Copied!</span>
+            </div>
+        </div>
+
+        <!-- Attendance Hub -->
+        <div class="assessment-card">
+            <h3>Attendance Hub</h3>
+            <p>A web platform where recruiters can set attendance automation for candidates placed in jobs. Candidates receive email and push notifications for attendance and recruiters can see attendance reports for set automations.</p>
+            <div class="link-container">
+                <a href="https://hireparamount.eastus.cloudapp.azure.com/attendanceHub/" target="_blank">Access Attendance Hub</a>
+                <button class="copy-button" onclick="copyToClipboard('https://hireparamount.eastus.cloudapp.azure.com/attendanceHub/', this)">Copy Link</button>
+                <span class="tooltip">Copied!</span>
+            </div>
+        </div>
+
         <!-- Typing Assessment -->
         <div class="assessment-card">
-            <h3>Paramount Typing Assessment</h3>
+            <h3>Typing Assessment</h3>
             <p>Measures typing speed and accuracy through a 1-minute and a 5-minute test. Candidates have unlimited attempts to improve their scores, with highlights indicating errors and word progression. The goal is to achieve the highest possible words per minute (WPM) with accuracy. After completing both tests at least once, candidates can submit their best scores to Paramount.</p>
             <div class="link-container">
                 <a href="http://hireparamount.eastus.cloudapp.azure.com:3110/" target="_blank">Access Typing Assessment</a>
@@ -151,7 +163,7 @@
 
         <!-- Computer Assessment -->
         <div class="assessment-card">
-            <h3>Paramount Computer Assessment</h3>
+            <h3>Computer Assessment</h3>
             <p>Evaluates essential computer skills, including navigation of video meetings, web browsers, and basic system settings. Candidates answer 25 questions with up to 3 attempts per question. Includes a sample question to familiarize candidates with the assessment format.</p>
             <div class="link-container">
                 <a href="http://hireparamount.eastus.cloudapp.azure.com:3120/" target="_blank">Access Computer Assessment</a>
@@ -162,7 +174,7 @@
 
         <!-- Comprehension Assessment -->
         <div class="assessment-card">
-            <h3>Paramount Comprehension Assessment</h3>
+            <h3>Comprehension Assessment</h3>
             <p>Assesses understanding of key insurance concepts such as risk management, policy types, and policyholder responsibilities. Candidates receive a PDF study guide and must answer 30 questions based on the material. Each attempt offers a new set of questions, with up to three attempts allowed. Paramount will notify candidates if retakes are necessary.</p>
             <div class="link-container">
                 <a href="http://hireparamount.eastus.cloudapp.azure.com:3130/" target="_blank">Access Comprehension Assessment</a>
@@ -195,7 +207,7 @@
 
         <!-- Computer Diagnostic Tool -->
         <div class="assessment-card">
-            <h3>Paramount Computer Diagnostic</h3>
+            <h3>Computer Diagnostic</h3>
             <p>Analyzes computer specifications to verify compatibility with the technical requirements for remote work opportunities. Estimated completion time: 5–10 minutes.</p>
             <div class="link-container">
                 <a href="https://www.hireparamount.com/computer-diagnostic" target="_blank">Access Computer Diagnostic Tool</a>
@@ -203,7 +215,6 @@
                 <span class="tooltip">Copied!</span>
             </div>
         </div>
-
 
         <!-- Hub Section -->
         <div class="section-title">Assessment Hubs</div>
