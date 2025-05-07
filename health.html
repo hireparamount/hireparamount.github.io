@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paramount System Status</title>
+  <!-- League Spartan font -->
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paramount-navy: #1A2B49;
+      --paramount-navy-dark: #16213E;
+      --paramount-aqua: #4ECDC4;
+      --paramount-aqua-hover: #45b8b0;
+      --paramount-light: #f5f5f5;
+      --paramount-gray: #6c757d;
+      --paramount-red: #E74C3C;
+      --paramount-white: #ffffff;
+      --paramount-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      --paramount-shadow-large: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'League Spartan', sans-serif;
+      background: linear-gradient(160deg, var(--paramount-navy), var(--paramount-navy-dark));
+      color: var(--paramount-navy);
+      min-height: 100vh;
+      padding: 30px;
+      font-size: 1.125rem;
+      text-align: center;
+    }
+    img.logo {
+      max-width: 280px;
+      margin: 0 auto 1rem;
+      display: block;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: var(--paramount-white);
+      margin-bottom: 1.5rem;
+    }
+    .category-title {
+      font-size: 1.75rem;
+      color: var(--paramount-white);
+      margin: 2rem 0 1rem;
+      text-align: left;
+      border-bottom: 2px solid var(--paramount-aqua);
+      padding-bottom: 0.25rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .status-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+      gap: 1rem;
+      margin: 1rem auto;
+      max-width: 900px;
+    }
+    .card {
+      background: var(--paramount-white);
+      border-radius: 8px;
+      box-shadow: var(--paramount-shadow);
+      padding: 1.8rem;
+      text-align: left;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--paramount-shadow-large);
+    }
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--paramount-navy);
+    }
+    .card .description {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: var(--paramount-gray);
+    }
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+    .status-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .running { background-color: var(--paramount-aqua); }
+    .down    { background-color: var(--paramount-red); }
+    .spinner {
+      width: 18px;
+      height: 18px;
+      border: 3px solid var(--paramount-light);
+      border-top: 3px solid var(--paramount-aqua);
+      border-radius: 50%;
+      margin-right: 10px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    .btn {
+      background: var(--paramount-aqua);
+      color: var(--paramount-white);
+      border: none;
+      border-radius: 50px;
+      padding: 14px 32px;
+      font-size: 1.125rem;
+      cursor: pointer;
+      transition: all .2s ease;
+      box-shadow: 0 2px 4px rgba(78,205,196,0.2);
+      margin-top: 1rem;
+    }
+    .btn:hover {
+      background: var(--paramount-aqua-hover);
+      box-shadow: 0 4px 8px rgba(78,205,196,0.3);
+      transform: translateY(-1px);
+    }
+    @media (max-width:600px) {
+      h1 { font-size: 2rem; }
+      .category-title { font-size: 1.5rem; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <img src="images/paramount_logo.png" alt="Paramount Logo" class="logo" />
+  <h1>Paramount System Status</h1>
+  <button id="refreshButton" class="btn">Refresh Status</button>
+
+  <div class="category-title">Core Services</div>
+  <div id="coreCards" class="status-cards"></div>
+
+  <div class="category-title">Web Assessments</div>
+  <div id="webCards" class="status-cards"></div>
+
+  <div class="category-title">Automations</div>
+  <div id="autoCards" class="status-cards"></div>
+
+  <div class="category-title">Others</div>
+  <div id="otherCards" class="status-cards"></div>
+
+  <script>
+    const categories = [
+      {
+        containerId: 'coreCards',
+        services: [
+          { name: 'Paramount Seps API', key: 'seps-api', url: 'https://specsapi.jollywater-cbf1aca1.eastus.azurecontainerapps.io/health', description: 'Stores assessment data and logs' },
+        ]
+      },
+      {
+        containerId: 'webCards',
+        services: [
+          { name: 'Video Interview', key: 'video-interview', url: '#', description: 'Conducts candidate interviews via video' },
+          { name: 'Attendance Hub', key: 'attendance', url: 'https://hireparamount.eastus.cloudapp.azure.com/attendanceHub/api/health', description: 'Automates and tracks job candidate attendance' },
+          { name: 'Internet Speed Test', key: 'speed-test', url: 'https://speedtest.jollywater-cbf1aca1.eastus.azurecontainerapps.io/health', description: 'Measures internet throughput for remote work readiness' },
+          { name: 'Typing Assessment', key: 'typing', url: 'http://hireparamount.eastus.cloudapp.azure.com:3110/', description: 'Tests typing speed and accuracy' },
+          { name: 'Computer Assessment', key: 'computer', url: 'http://hireparamount.eastus.cloudapp.azure.com:3120/', description: 'Evaluates basic computer literacy' },
+          { name: 'Comprehension Assessment', key: 'comprehension', url: 'http://hireparamount.eastus.cloudapp.azure.com:3130/', description: 'Checks reading comprehension on insurance concepts' },
+          { name: 'Sales & Customer Service Assessment', key: 'sales-cs', url: 'http://hireparamount.eastus.cloudapp.azure.com:3140/', description: 'Tests sales and customer service skills' },
+          { name: 'Sales & Customer Service Assessment Hub', key: 'sales-hub', url: 'http://hireparamount.eastus.cloudapp.azure.com:3100/', description: 'A hub for related assessments' }
+        ]
+      },
+      {
+        containerId: 'autoCards',
+        services: [
+          { name: 'Duplicate Candidates', key: 'dup-candidates', url: '#', description: 'Removes duplicate candidate entries' },
+          { name: 'Tearsheet Automation', key: 'tearsheet', url: '#', description: 'Generates daily tearsheets' }
+        ]
+      },
+      {
+        containerId: 'otherCards',
+        services: [
+          { name: 'Computer Diagnostic', key: 'comp-diagnostic', url: 'https://hireparamount.github.io/executables/Paramount%20Computer%20Diagnostics.exe', description: 'Collects system specifications' }
+        ]
+      }
+    ];
+
+    function createCard(svc) {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <h2>${svc.name}</h2>
+        ${svc.description ? `<p class="description">${svc.description}</p>` : ''}
+        <div id="${svc.key}-status" class="status-indicator">
+          <span class="spinner"></span> Checking…
+        </div>`;
+      return card;
+    }
+
+    async function updateStatus(svc) {
+      const el = document.getElementById(`${svc.key}-status`);
+      el.innerHTML = '<span class="spinner"></span> Checking…';
+      try {
+        const res = await fetch(svc.url, { cache: 'no-store' });
+        if (res.ok) {
+          el.innerHTML = '<span class="status-dot running"></span> Running';
+        } else {
+          throw new Error();
+        }
+      } catch {
+        el.innerHTML = '<span class="status-dot down"></span> Offline/Error';
+      }
+    }
+
+    function refreshAll() {
+      categories.forEach(cat => cat.services.forEach(updateStatus));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      categories.forEach(cat => {
+        const container = document.getElementById(cat.containerId);
+        cat.services.forEach(svc => container.appendChild(createCard(svc)));
+      });
+      document.getElementById('refreshButton').onclick = refreshAll;
+      refreshAll();
+    });
+  </script>
+</body>
+</html>
