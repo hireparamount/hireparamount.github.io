@@ -152,7 +152,7 @@
       {
         containerId: 'coreCards',
         services: [
-          { name: 'Paramount Seps API', key: 'seps-api', url: 'https://specsapi.jollywater-cbf1aca1.eastus.azurecontainerapps.io/health', description: 'Stores assessment data and logs' },
+          { name: 'Paramount Specs API', key: 'seps-api', url: 'https://specsapi.jollywater-cbf1aca1.eastus.azurecontainerapps.io/health', description: 'Stores assessment data and logs' },
         ]
       },
       {
@@ -163,7 +163,7 @@
           { name: 'Internet Speed Test', key: 'speed-test', url: 'https://speedtest.jollywater-cbf1aca1.eastus.azurecontainerapps.io/health', description: 'Measures internet throughput for remote work readiness' },
           { name: 'Typing Assessment', key: 'typing', url: 'http://hireparamount.eastus.cloudapp.azure.com:3110/', description: 'Tests typing speed and accuracy' },
           { name: 'Computer Assessment', key: 'computer', url: 'http://hireparamount.eastus.cloudapp.azure.com:3120/', description: 'Evaluates basic computer literacy' },
-          { name: 'Comprehension Assessment', key: 'comprehension', url: 'http://hireparamount.eastus.cloudapp.azure.com:3130/', description: 'Checks reading comprehension on insurance concepts' },
+          { name: 'Comprehension Assessment', key: 'comprehension', url: 'https://hireparamount.eastus.cloudapp.azure.com/comprehensionAssessment/health', description: 'Checks reading comprehension on insurance concepts' },
           { name: 'Sales & Customer Service Assessment', key: 'sales-cs', url: 'http://hireparamount.eastus.cloudapp.azure.com:3140/', description: 'Tests sales and customer service skills' },
           { name: 'Sales & Customer Service Assessment Hub', key: 'sales-hub', url: 'http://hireparamount.eastus.cloudapp.azure.com:3100/', description: 'A hub for related assessments' }
         ]
@@ -172,7 +172,7 @@
         containerId: 'autoCards',
         services: [
           { name: 'Duplicate Candidates', key: 'dup-candidates', url: '#', description: 'Removes duplicate candidate entries' },
-          { name: 'Tearsheet Automation', key: 'tearsheet', url: '#', description: 'Generates daily tearsheets' }
+          { name: 'Tearsheet Automation', key: 'tearsheet', url: '#', description: 'ATS system for resumes' }
         ]
       },
       {
