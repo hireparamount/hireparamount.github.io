@@ -2,70 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Paramount Executables Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paramount Downloads</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <!-- Font Awesome CDN (Optional) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="portal.js" defer></script>
 </head>
-<body>
-  <header>
-    <img src="images/paramount_logo.png" alt="Paramount Logo">
-    <h1>Paramount Executables Portal</h1>
-    <nav>
+<body data-page="downloads">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Primary navigation">
+      <a class="brand-link" href="index.html">
+        <img src="images/paramount_logo.png" alt="Paramount logo">
+        <span><span class="brand-title">Paramount Tech</span><span class="brand-subtitle">Recruiting tools and status</span></span>
+      </a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="assessmentPortal.html">Assessment Portal</a></li>
+        <li><a href="index.html" data-nav="home">Overview</a></li>
+        <li><a href="assessmentPortal.html" data-nav="assessments">Assessments</a></li>
+        <li><a href="health.html" data-nav="status">Status</a></li>
+        <li><a href="executableProjects.html" data-nav="downloads">Downloads</a></li>
+        <li><a href="privacyPolicy.html" data-nav="privacy">Privacy</a></li>
+        <li><button class="theme-toggle" type="button" data-theme-toggle>Dark mode</button></li>
       </ul>
     </nav>
   </header>
 
-  <section id="executables">
-    <div class="container">
-      <p>Welcome to the Paramount Executables Portal. Here you can download the latest versions of our tools.</p>
-      <ul class="executables-list">
-        <li class="executable-item">
-          <h3>salesImporter - <span class="version">v1.0.0</span></h3>
-          <p>Imports ClientContacts from CSV/Excel sheets into Bullhorn.</p>
-          <p class="last-updated">Last Updated: June 19, 2025</p>
-          <div class="executable-links">
-            <a href="/executables/Paramount ClientContact Importer.exe" download="Paramount ClientContact Importer.exe" class="btn">
-              <i class="fas fa-download"></i> Download Executable
-            </a>
-          </div>
-        </li>
-        <li class="executable-item">
-          <h3>attendanceTracker - <span class="version">v0.0.3</span></h3>
-          <p>Tracks attendance from Zoom and Teams meetings without needing host/admin access via web scraping.</p>
-          <p class="last-updated">Last Updated: January 5, 2025</p>
-          <div class="executable-links">
-            <a href="/executables/Paramount Attendence Tracker.exe" download="Paramount Attendence Tracker.exe" class="btn">
-              <i class="fas fa-download"></i> Download Executable
-            </a>
-          </div>
-        </li>
-        <li class="executable-item">
-          <h3>Job Scraper</h3>
-          <p>GUI for scraping job listings.</p>
-          <p class="last-updated">Last Updated: January 5, 2025</p>
-          <div class="executable-links">
-            <a href="/executables/Paramount Job Scrapper.exe" download="Paramount Job Scrapper.exe" class="btn">
-              <i class="fas fa-download"></i> Download Executable
-            </a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
+  <main id="main" class="site-shell">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Desktop Utilities</p>
+        <h1>Downloads for recruiting operations.</h1>
+        <p>Internal executables and candidate diagnostic tools. These are Windows downloads, so browsers may show standard executable warnings.</p>
+      </div>
+    </section>
 
-  <footer>
-    <p>Thank you for working with us!</p>
-    <a href="https://www.hireparamount.com/">Visit our main website</a>
-    <br>
-    <a href="privacyPolicy.html">Privacy Policy</a>
-    <br>
-    <a href="index.html">Paramount Computer Diagnostic</a>
-    
-    <p>&copy; 2026 Paramount Staffing. All rights reserved.</p>
-  </footer>
+    <section class="section">
+      <div class="section-header"><div><h2>Candidate Tool</h2><p>The diagnostic app candidates use to submit device and network readiness details.</p></div></div>
+      <div class="grid">
+        <article class="card"><div class="card-body"><span class="tag">Current</span><h3>Paramount Computer Diagnostics</h3><p class="last-updated">Last updated: June 26, 2026</p><p>Evaluates Windows, CPU, memory, storage, antivirus, camera, microphone, and network readiness.</p><div class="link-actions"><a class="btn primary" href="/executables/Paramount Computer Diagnostics.exe" download="Paramount Computer Diagnostics.exe">Download</a><button class="copy-button" data-copy="https://hireparamount.github.io/executables/Paramount%20Computer%20Diagnostics.exe">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header"><div><h2>Internal Utilities</h2><p>Recruiter and operations tools distributed from this portal.</p></div></div>
+      <div class="grid">
+        <article class="card"><div class="card-body"><span class="tag">v1.0.0</span><h3>ClientContact Importer</h3><p class="last-updated">Last updated: June 19, 2025</p><p>Imports ClientContacts from CSV or Excel sheets into Bullhorn.</p><div class="link-actions"><a class="btn primary" href="/executables/Paramount ClientContact Importer.exe" download="Paramount ClientContact Importer.exe">Download</a><button class="copy-button" data-copy="https://hireparamount.github.io/executables/Paramount%20ClientContact%20Importer.exe">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+        <article class="card"><div class="card-body"><span class="tag">v0.0.3</span><h3>Attendance Tracker</h3><p class="last-updated">Last updated: January 5, 2025</p><p>Tracks attendance from Zoom and Teams meetings without needing host or admin access.</p><div class="link-actions"><a class="btn primary" href="/executables/Paramount Attendence Tracker.exe" download="Paramount Attendence Tracker.exe">Download</a><button class="copy-button" data-copy="https://hireparamount.github.io/executables/Paramount%20Attendence%20Tracker.exe">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+        <article class="card"><div class="card-body"><span class="tag">Utility</span><h3>Job Scraper</h3><p class="last-updated">Last updated: January 5, 2025</p><p>GUI utility for scraping job listings.</p><div class="link-actions"><a class="btn primary" href="/executables/Paramount Job Scrapper.exe" download="Paramount Job Scrapper.exe">Download</a><button class="copy-button" data-copy="https://hireparamount.github.io/executables/Paramount%20Job%20Scrapper.exe">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><p>&copy; 2026 Paramount Staffing. All rights reserved.</p><div class="footer-links"><a href="https://www.hireparamount.com/">Main website</a><a href="mailto:support@hireparamount.com">Support</a></div></div></footer>
 </body>
 </html>
