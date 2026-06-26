@@ -115,7 +115,7 @@
       {
         containerId: 'internalCards',
         services: [
-          { name: 'CST Portal', url: 'https://cst.hireparamount.com/', description: 'Client services and operations portal. Its security headers block cross-origin browser health reads, so check it manually.', kind: 'Internal', manual: true },
+          { name: 'CST Portal', url: 'https://cst.hireparamount.com/', checkUrl: 'https://cst.hireparamount.com/api/health', description: 'Client services and operations portal.', kind: 'Internal' },
           { name: 'PIN Badge System', url: 'https://pin.hireparamount.com/', checkUrl: 'https://pin.hireparamount.com/api/health', description: 'NFC conference badge issuing and contact profiles.', kind: 'Badge' },
           { name: 'Resume Formatter', url: 'https://paramount-resume-formatter-app.azurewebsites.net/', checkUrl: 'https://paramount-resume-formatter-app.azurewebsites.net/health', description: 'Reformats candidate resumes into the Paramount template.', kind: 'Internal' },
           { name: 'Bullhorn Job Open Report', url: 'https://paramount-bullhorn-reporter-app.azurewebsites.net/', checkUrl: 'https://paramount-bullhorn-reporter-app.azurewebsites.net/health', description: 'Reporting on open Bullhorn job orders.', kind: 'Report' },
