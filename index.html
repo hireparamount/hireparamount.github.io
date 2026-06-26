@@ -2,87 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Paramount Computer Diagnostic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paramount Tech Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="portal.js" defer></script>
 </head>
-<body>
-  <header>
-    <img src="images/paramount_logo.png" alt="Paramount Logo">
-    <h1>Paramount Computer Diagnostic</h1>
-    <nav>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Primary navigation">
+      <a class="brand-link" href="index.html">
+        <img src="images/paramount_logo.png" alt="Paramount logo">
+        <span><span class="brand-title">Paramount Tech</span><span class="brand-subtitle">Recruiting tools and status</span></span>
+      </a>
       <ul class="nav-links">
-        <li><a href="executableProjects.html">Other Projects</a></li>
-        <li><a href="assessmentPortal.html">Assessment Portal</a></li>
+        <li><a href="index.html" data-nav="home">Overview</a></li>
+        <li><a href="assessmentPortal.html" data-nav="assessments">Assessments</a></li>
+        <li><a href="health.html" data-nav="status">Status</a></li>
+        <li><a href="executableProjects.html" data-nav="downloads">Downloads</a></li>
+        <li><a href="privacyPolicy.html" data-nav="privacy">Privacy</a></li>
+        <li><button class="theme-toggle" type="button" data-theme-toggle>Dark mode</button></li>
       </ul>
     </nav>
   </header>
 
-  <section id="about">
-    <div class="container">
-      <p>
-        This application is a computer diagnostic assessment that will evaluate computer specifications to ensure it meets the required criteria for your work-at-home job opportunity.  
-        <br><br>How long will it take? approx. 5 – 10 minutes.  
-      </p>
-    </div>
-  </section>
+  <main id="main" class="site-shell">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Internal Tech Portal</p>
+        <h1>One place for Paramount recruiting tools.</h1>
+        <p>Quickly open assessment links, copy candidate URLs, check production status, and download the desktop tools used by recruiters and operations.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="assessmentPortal.html">Copy assessment URLs</a>
+          <a class="btn secondary" href="health.html">View system status</a>
+        </div>
+      </div>
+    </section>
 
-  <section id="download">
-    <div class="container">
-      <h2>Ready to start?</h2>
-      <ul>
-        <li>
-          <h3>Download the Diagnostic App</h3>
-          <p class="last-updated">Last Updated: June 26, 2026</p>
-          <a href="/executables/Paramount Computer Diagnostics.exe" download="Paramount Computer Diagnostics.exe" class="btn">
-            <i class="fas fa-download"></i> Click Here
-          </a>
-          <p>
-            Your download should start automatically, if you are having trouble please <a href="/executables/Paramount Computer Diagnostics.exe" download="Paramount Computer Diagnostics.exe">try again</a>.
-            <br><br>
-            <i>Privacy Notice:</i> You are being asked to download and run a computer diagnostic application (the “Paramount Computer Diagnostic”) in connection with placement through Paramount Staffing, LLC.  
-            The app collects and reports certain technical aspects of your computer network setup and performance required in connection with providing service to Company clients.  
-            Except as described in the app's Privacy Statement, found <a href="privacyPolicy.html"><u>here</u></a>, the app does not collect “personal information” about you as that term may be defined by applicable law.  
-            <b>BY DOWNLOADING AND RUNNING 'PARAMOUNT COMPUTER DIAGNOSTIC', YOU ARE CONSENTING TO THE COLLECTION AND USE OF YOUR PERSONAL INFORMATION AS DESCRIBED IN THE <a href="privacyPolicy.html"><u>APP'S PRIVACY STATEMENT</u></a>.</b>  
-            If you do not consent to the collection and use of your personal information, do not download or run the app. 
-            <br><br>
-            After downloading, please utilize the email address that sent you this link.
-          </p>
-        </li>
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>What Needs Updating</h2>
+          <p>The portal now has a shared UI, but the VM-hosted path apps still use the Azure hostname because no custom subdomains are documented or resolving for them.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="card-body"><span class="tag">Done</span><h3>Custom domains</h3><p>Video Interview, Speed Test, Survey, AEP, Solix, CST, and API use branded domains where available.</p></div></article>
+        <article class="card"><div class="card-body"><span class="tag">Watch</span><h3>VM assessment URLs</h3><p>Typing, computer, comprehension, sales, attendance, and legacy hubs are still path-based under the Azure VM hostname.</p></div></article>
+        <article class="card"><div class="card-body"><span class="tag">Next</span><h3>Client-ready polish</h3><p>The new layout is cleaner for internal use and can evolve into a client-facing showcase with case studies and screenshots.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Fast Actions</h2>
+          <p>Most common workflows for recruiters and operations.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="card-body">
+            <div class="tag-row"><span class="tag">Links</span></div>
+            <h3>Assessment Portal</h3>
+            <p>Open and copy every active assessment, survey, and candidate-facing tool URL.</p>
+            <div class="link-actions"><a class="btn primary" href="assessmentPortal.html">Open assessments</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <div class="tag-row"><span class="tag">Status</span></div>
+            <h3>System Status</h3>
+            <p>Check reachable services and identify tools that require manual verification.</p>
+            <div class="link-actions"><a class="btn primary" href="health.html">Check status</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <div class="tag-row"><span class="tag">Downloads</span></div>
+            <h3>Desktop Tools</h3>
+            <p>Download computer diagnostics and internal executable utilities.</p>
+            <div class="link-actions"><a class="btn primary" href="executableProjects.html">View downloads</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Computer Diagnostic</h2>
+          <p>The candidate diagnostic checks device specifications, connectivity, camera, microphone, and network details for remote-work readiness.</p>
+        </div>
+      </div>
+      <div class="content-panel download-card">
+        <div>
+          <h3>Paramount Computer Diagnostics</h3>
+          <p class="last-updated">Last updated: June 26, 2026</p>
+          <p>Estimated completion time is 5 to 10 minutes. Candidates should use the same email address that received the invitation.</p>
+        </div>
+        <a class="btn primary" href="/executables/Paramount Computer Diagnostics.exe" download="Paramount Computer Diagnostics.exe">Download app</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Diagnostic Troubleshooting</h2>
+          <p>Common issues recruiters may need to explain to candidates.</p>
+        </div>
+      </div>
+      <ul class="screenshot-list">
+        <li class="card"><div class="card-body"><h3>No Internet Connection</h3><p>Ask the candidate to check their connection, hardwire if possible, and relaunch the app.</p><img src="/images/troubleshooting_no_internet.png" alt="No internet connection diagnostic error"></div></li>
+        <li class="card"><div class="card-body"><h3>Incorrect Email</h3><p>Ask the candidate to retry using the email address associated with their Paramount application.</p><img src="/images/troubleshooting_incorrect_email.png" alt="Incorrect email diagnostic error"></div></li>
       </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Paramount Staffing. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.hireparamount.com/">Main website</a>
+        <a href="mailto:support@hireparamount.com">Support</a>
+      </div>
     </div>
-  </section>
-
-
-  <section id="troubleshooting">
-    <div class="container">
-      <h2>Troubleshooting</h2>
-      <p>Common issues such as connectivity errors, system compatibility, and their solutions.</p>
-      <ul>
-
-        <li>
-          <h3>No Internet Connection</h3>
-          <p>This is the most common error message that pops up. Please check your internet connection and relaunch the app. Make sure you are hardwired.</p>
-          <img src="/images/troubleshooting_no_internet.png" alt="No Internet Error">
-        </li>
-
-        <li>
-          <h3>Incorrect Email</h3>
-          <p>If this issue pops up, please recheck your email and try again. Use your email that has been associated with us.</p>
-          <img src="/images/troubleshooting_incorrect_email.png" alt="Incorrect Email Error">
-        </li>
-
-      </ul>
-      <p>If there are any further issues, please reach out to us at <a href="mailto:support@hireparamount.com">support@hireparamount.com</a>.</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>Thank you for working with us!</p>
-    <a href="https://www.hireparamount.com/">Visit our main website</a>
-    <br>
-    <a href="privacyPolicy.html">Privacy Policy</a>
-    
-    <p>&copy; 2026 Paramount Staffing. All rights reserved.</p>
   </footer>
 </body>
 </html>

@@ -2,88 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy - Paramount Computer Diagnostic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="portal.js" defer></script>
 </head>
-<body>
-  <header>
-    <img src="images/paramount_logo.png" alt="Paramount Logo">
-    <h1>Paramount Computer Diagnostic</h1>
-    <nav>
+<body data-page="privacy">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Primary navigation">
+      <a class="brand-link" href="index.html">
+        <img src="images/paramount_logo.png" alt="Paramount logo">
+        <span><span class="brand-title">Paramount Tech</span><span class="brand-subtitle">Recruiting tools and status</span></span>
+      </a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" data-nav="home">Overview</a></li>
+        <li><a href="assessmentPortal.html" data-nav="assessments">Assessments</a></li>
+        <li><a href="health.html" data-nav="status">Status</a></li>
+        <li><a href="executableProjects.html" data-nav="downloads">Downloads</a></li>
+        <li><a href="privacyPolicy.html" data-nav="privacy">Privacy</a></li>
+        <li><button class="theme-toggle" type="button" data-theme-toggle>Dark mode</button></li>
       </ul>
     </nav>
   </header>
 
-  <section id="privacy-policy">
-    <div class="container">
+  <main id="main" class="site-shell">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Privacy Notice</p>
+        <h1>Computer diagnostic data use.</h1>
+        <p>This policy explains what the Paramount Computer Diagnostic collects, how it is used, and who to contact with data requests.</p>
+      </div>
+    </section>
+
+    <section class="section content-panel">
       <h2>Privacy Policy</h2>
-      <p>
-        Our commitment to your privacy is paramount. This Privacy Policy explains how Paramount Computer Diagnostic collects, uses, and protects information.
-      </p>
-      <section>
-        <h3>Information Collection and Use</h3>
-        <p>Paramount Computer Diagnostic collects data from your device to assess job compatibility and update your Bullhorn profile. Following is the specific information collected:</p>
-        <ul>
-          <li>
-            <strong>System Hardware Details:</strong>
-            <p>
-              It collects information about which version of Windows you are using, and information regarding your system's hardware, including Machine Type, Active Monitors, Free & Total RAM (memory), CPU Type, Processor, Cores, available Hard Drives, and Antivirus currently being used.
-            </p>
-          </li>
+      <p>Our commitment to your privacy is paramount. This Privacy Policy explains how Paramount Computer Diagnostic collects, uses, and protects information.</p>
 
-          <li>
-            <strong>Network Information:</strong>
-            <p>
-              The app also measures your download and upload speeds, <!--retrieves your device's IP address, -->the type of Network Connection you have, and your Network Provider.
-            </p>
-          </li>
+      <h3>Information Collection and Use</h3>
+      <p>Paramount Computer Diagnostic collects data from your device to assess job compatibility and update your Bullhorn profile. The specific information collected includes:</p>
+      <ul>
+        <li><strong>System Hardware Details:</strong> Windows version, machine type, active monitors, free and total RAM, CPU type, processor, cores, hard-drive availability, and antivirus information.</li>
+        <li><strong>Network Information:</strong> Download and upload speeds, network connection type, and network provider.</li>
+        <li><strong>Audio and Video Input Devices:</strong> Microphone availability, camera availability, and camera resolution.</li>
+        <li><strong>Bullhorn Integration:</strong> Collected data may be integrated into your Bullhorn profile using the email address registered with Paramount.</li>
+      </ul>
 
-          <li>
-            <strong>Audio and Video Input Devices:</strong>
-            <p>
-              It determines the availability of audio (microphone) and video (camera) input devices on your system along with the camera resolution.
-            </p>
-          </li>
+      <h3>Information Sharing and Disclosure</h3>
+      <p>The collected data is used to evaluate candidate eligibility for specific job positions and is not shared with third parties outside the organization, except as necessary to fulfill job-related requests.</p>
 
-          <li>
-            <strong>Bullhorn Integration:</strong>
-            <p>
-              The collected data can then be integrated into your Bullhorn profile, enhancing its accuracy and completeness. This is done through your email address that is registered with Paramount.
-            </p>
-          </li>
-        </ul>
-      </section>
-      <p>
-        <strong>Information Sharing and Disclosure</strong><br>
-        The collected data is solely used to evaluate candidate eligibility for specific job positions and is not shared with third parties outside the organization, except as necessary to fulfill job-related requests.
-      </p>
-      <p>
-        <strong>Access to Your Information and Control</strong><br>
-        You have the right to access, correct, or delete your information. Please contact us through the following email, <a href="mailto:support@hireparamount.com">support@hireparamount.com</a> to manage your data.
-      </p>
-      <p>
-        <strong>Security Measures</strong><br>
-        While we employ security measures to protect your information, avoid transmitting sensitive data through our email to mitigate potential risks.
-      </p>
-      <p>
-        <strong>Links to Other Sites</strong><br>
-        Paramount Computer Diagnostic contains one link to an external site; It is the app's help/support page and is maintained by Paramount.
-      </p>
-      <p>
-        For any queries regarding this Privacy Policy or your data, please contact us through the following email, <a href="mailto:support@hireparamount.com">support@hireparamount.com</a>.
-      </p>
-    </div>
-  </section>
+      <h3>Access to Your Information and Control</h3>
+      <p>You have the right to access, correct, or delete your information. Contact <a href="mailto:support@hireparamount.com">support@hireparamount.com</a> to manage your data.</p>
 
-  <footer>
-    <p>Thank you for working with us!</p>
-    <a href="https://www.hireparamount.com/">Visit our main website</a>
-    <br>
-    <a href="index.html">Paramount Computer Diagnostic</a>
-    
-    <p>&copy; 2026 Paramount Staffing. All rights reserved.</p>
-  </footer>
+      <h3>Security Measures</h3>
+      <p>While we employ security measures to protect your information, avoid transmitting sensitive data through email to mitigate potential risks.</p>
+
+      <h3>Links to Other Sites</h3>
+      <p>Paramount Computer Diagnostic contains one link to an external site: the app's help/support page, maintained by Paramount.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><p>&copy; 2026 Paramount Staffing. All rights reserved.</p><div class="footer-links"><a href="https://www.hireparamount.com/">Main website</a><a href="mailto:support@hireparamount.com">Support</a></div></div></footer>
 </body>
 </html>

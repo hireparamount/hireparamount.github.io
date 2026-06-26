@@ -1,310 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paramount Assessment Portal</title>
-    <style>
-        /* Basic reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body styling */
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            background-color: #165d83;
-        }
-
-        /* Center-align the title and logo container */
-        .title-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .title-container img {
-            margin-top: 10px; /* Space between the title and logo */
-            width: 180px; /* Adjust this value to make the logo bigger */
-            height: auto; /* Keeps the aspect ratio of the image */
-        }
-
-        /* Main content */
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-
-        h1, h2 {
-            text-align: center;
-            color: #fff;
-            margin-bottom: 10px;
-        }
-
-        /* Section title */
-        .section-title {
-            color: #ffffff; /* Make it brighter to stand out */
-            font-size: 1.5em; /* Increase the font size */
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-            text-decoration: underline; /* Underline the text */
-        }
-
-        /* Card styling */
-        .assessment-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .assessment-card h3 {
-            margin-bottom: 10px;
-            color: #2a2a2a;
-        }
-
-        .assessment-card p {
-            margin-bottom: 10px;
-            color: #555;
-        }
-
-        .assessment-card ul {
-            padding-left: 25px; /* Adjust this value for more space */
-        }
-
-        /* Link and copy button styling */
-        .link-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .link-container a {
-            color: #1e90ff;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-
-        .copy-button {
-            background-color: #1e90ff;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 0.9em;
-        }
-
-        .copy-button:hover {
-            background-color: #4682b4;
-        }
-
-        /* Tooltip styling */
-        .tooltip {
-            display: none;
-            margin-left: 10px;
-            padding: 5px 10px;
-            background-color: #28a745; /* Green background color */
-            color: white;
-            border-radius: 5px;
-            font-size: 0.9em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paramount Assessment Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="portal.js" defer></script>
 </head>
-<body>
-    <main>
-        <div class="title-container">
-            <h1>Paramount Assessment Portal</h1>
-            <img src="images/logo.png" alt="Paramount Logo">
-        </div>
-        <h2>Access, complete, and track all assessments required for Paramount's hiring process.</h2>
+<body data-page="assessments">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Primary navigation">
+      <a class="brand-link" href="index.html">
+        <img src="images/paramount_logo.png" alt="Paramount logo">
+        <span><span class="brand-title">Paramount Tech</span><span class="brand-subtitle">Recruiting tools and status</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-nav="home">Overview</a></li>
+        <li><a href="assessmentPortal.html" data-nav="assessments">Assessments</a></li>
+        <li><a href="health.html" data-nav="status">Status</a></li>
+        <li><a href="executableProjects.html" data-nav="downloads">Downloads</a></li>
+        <li><a href="privacyPolicy.html" data-nav="privacy">Privacy</a></li>
+        <li><button class="theme-toggle" type="button" data-theme-toggle>Dark mode</button></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!-- Assessments Section -->
-        <div class="section-title">Assessments</div>
+  <main id="main" class="site-shell">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Recruiter URL Hub</p>
+        <h1>Assessment links that are easy to copy.</h1>
+        <p>Use this page to open or copy the current production URLs for candidate assessments, surveys, hubs, and diagnostics.</p>
+        <div class="hero-actions"><a class="btn secondary" href="health.html">Check status first</a></div>
+      </div>
+    </section>
 
-        <!-- Video Interview -->
-        <div class="assessment-card">
-            <h3>Video Interview</h3>
-            <p>A web platform where job candidates record video interview responses after email-based authentication against Bullhorn. The system stores these videos, allows internal reviewers to evaluate them, and integrates with Bullhorn to retrieve questions and post review feedback.</p>
-            <div class="link-container">
-                <a href="https://videointerview.hireparamount.com/" target="_blank" rel="noopener noreferrer">Access Video Interview</a>
-                <button class="copy-button" onclick="copyToClipboard('https://videointerview.hireparamount.com/', this)">Copy Link</button>
-                <span class="tooltip">Copied!</span>
-            </div>
-        </div>
+    <section class="section">
+      <div class="section-header"><div><h2>Core Candidate Tools</h2><p>Primary branded URLs and VM-hosted assessments candidates may receive.</p></div></div>
+      <div class="grid" data-card-list>
+        <article class="card"><div class="card-body"><span class="tag">Custom Domain</span><h3>Video Interview</h3><p>Candidate video interview recording and review.</p><div class="link-actions"><a class="btn primary" href="https://videointerview.hireparamount.com/" target="_blank" rel="noopener noreferrer">Open</a><button class="copy-button" data-copy="https://videointerview.hireparamount.com/">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+        <article class="card"><div class="card-body"><span class="tag">Custom Domain</span><h3>Solix Assessment Hub</h3><p>Primary Solix screening and assessment hub.</p><div class="link-actions"><a class="btn primary" href="https://solix-full.hireparamount.com/" target="_blank" rel="noopener noreferrer">Open</a><button class="copy-button" data-copy="https://solix-full.hireparamount.com/">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+        <article class="card"><div class="card-body"><span class="tag">Custom Domain</span><h3>Internet Speed Test</h3><p>Candidate internet speed verification.</p><div class="link-actions"><a class="btn primary" href="https://speedtest.hireparamount.com/" target="_blank" rel="noopener noreferrer">Open</a><button class="copy-button" data-copy="https://speedtest.hireparamount.com/">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+        <article class="card"><div class="card-body"><span class="tag">VM App</span><h3>Attendance Hub</h3><p>Recruiter attendance automation and reports.</p><div class="link-actions"><a class="btn primary" href="https://hireparamount.eastus.cloudapp.azure.com/attendanceHub/" target="_blank" rel="noopener noreferrer">Open</a><button class="copy-button" data-copy="https://hireparamount.eastus.cloudapp.azure.com/attendanceHub/">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+        <article class="card"><div class="card-body"><span class="tag">VM App</span><h3>Typing Assessment</h3><p>Typing speed and accuracy tests.</p><div class="link-actions"><a class="btn primary" href="https://hireparamount.eastus.cloudapp.azure.com/typingAssessment/" target="_blank" rel="noopener noreferrer">Open</a><button class="copy-button" data-copy="https://hireparamount.eastus.cloudapp.azure.com/typingAssessment/">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+        <article class="card"><div class="card-body"><span class="tag">VM App</span><h3>Computer Assessment</h3><p>Basic computer-literacy assessment.</p><div class="link-actions"><a class="btn primary" href="https://hireparamount.eastus.cloudapp.azure.com/computerAssessment/" target="_blank" rel="noopener noreferrer">Open</a><button class="copy-button" data-copy="https://hireparamount.eastus.cloudapp.azure.com/computerAssessment/">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+        <article class="card"><div class="card-body"><span class="tag">VM App</span><h3>Comprehension Assessment</h3><p>Insurance concept comprehension assessment.</p><div class="link-actions"><a class="btn primary" href="https://hireparamount.eastus.cloudapp.azure.com/comprehensionAssessment/" target="_blank" rel="noopener noreferrer">Open</a><button class="copy-button" data-copy="https://hireparamount.eastus.cloudapp.azure.com/comprehensionAssessment/">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+        <article class="card"><div class="card-body"><span class="tag">VM App</span><h3>Sales & Customer Service Assessment</h3><p>Sales and customer-service knowledge check.</p><div class="link-actions"><a class="btn primary" href="https://hireparamount.eastus.cloudapp.azure.com/salesAssessment/" target="_blank" rel="noopener noreferrer">Open</a><button class="copy-button" data-copy="https://hireparamount.eastus.cloudapp.azure.com/salesAssessment/">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+        <article class="card"><div class="card-body"><span class="tag">Custom Domain</span><h3>Computer Diagnostic</h3><p>Candidate diagnostic download page.</p><div class="link-actions"><a class="btn primary" href="https://www.hireparamount.com/computer-diagnostic" target="_blank" rel="noopener noreferrer">Open</a><button class="copy-button" data-copy="https://www.hireparamount.com/computer-diagnostic">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+      </div>
+    </section>
 
-        <!-- Solix Assessment Hub -->
-        <div class="assessment-card">
-            <h3>Solix Assessment Hub</h3>
-            <p>A candidate-facing hub for Solix applicants to complete required screening, pre-hire, and internet speed assessments.</p>
-            <div class="link-container">
-                <a href="https://solix-full.hireparamount.com/" target="_blank" rel="noopener noreferrer">Access Solix Assessment Hub</a>
-                <button class="copy-button" onclick="copyToClipboard('https://solix-full.hireparamount.com/', this)">Copy Link</button>
-                <span class="tooltip">Copied!</span>
-            </div>
-        </div>
+    <section class="section">
+      <div class="section-header"><div><h2>Surveys</h2><p>Candidate profile and campaign-specific survey flows.</p></div></div>
+      <div class="grid two">
+        <article class="card"><div class="card-body"><span class="tag">Custom Domain</span><h3>Candidate Profile Survey</h3><p>Profile, availability, call-center experience, and work-preference survey.</p><div class="link-actions"><a class="btn primary" href="https://survey.hireparamount.com/" target="_blank" rel="noopener noreferrer">Open</a><button class="copy-button" data-copy="https://survey.hireparamount.com/">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+        <article class="card"><div class="card-body"><span class="tag">Custom Domain</span><h3>AEP Licensed Agent Survey</h3><p>AEP pre-screening, license collection, and booking flow.</p><div class="link-actions"><a class="btn primary" href="https://apply.hireparamount.com/" target="_blank" rel="noopener noreferrer">Open</a><button class="copy-button" data-copy="https://apply.hireparamount.com/">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+      </div>
+    </section>
 
-        <!-- Attendance Hub -->
-        <div class="assessment-card">
-            <h3>Attendance Hub</h3>
-            <p>A web platform where recruiters can set attendance automation for candidates placed in jobs. Candidates receive email and push notifications for attendance and recruiters can see attendance reports for set automations.</p>
-            <div class="link-container">
-                <a href="https://hireparamount.eastus.cloudapp.azure.com/attendanceHub/" target="_blank" rel="noopener noreferrer">Access Attendance Hub</a>
-                <button class="copy-button" onclick="copyToClipboard('https://hireparamount.eastus.cloudapp.azure.com/attendanceHub/', this)">Copy Link</button>
-                <span class="tooltip">Copied!</span>
-            </div>
-        </div>
+    <section class="section">
+      <div class="section-header"><div><h2>Assessment Hubs</h2><p>Bundled VM-hosted flows for role-specific assessment groups.</p></div></div>
+      <div class="grid two">
+        <article class="card"><div class="card-body"><span class="tag">VM App</span><h3>Sales Assessment Hub</h3><p>Includes typing, computer, sales/customer service, and internet speed testing.</p><div class="link-actions"><a class="btn primary" href="https://hireparamount.eastus.cloudapp.azure.com/hub_salesAssessment/" target="_blank" rel="noopener noreferrer">Open</a><button class="copy-button" data-copy="https://hireparamount.eastus.cloudapp.azure.com/hub_salesAssessment/">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+        <article class="card"><div class="card-body"><span class="tag">VM App</span><h3>License Agent Hub</h3><p>Includes computer assessment, internet speed test, and comprehension assessment.</p><div class="link-actions"><a class="btn primary" href="https://hireparamount.eastus.cloudapp.azure.com/hub_licenseAssessment/" target="_blank" rel="noopener noreferrer">Open</a><button class="copy-button" data-copy="https://hireparamount.eastus.cloudapp.azure.com/hub_licenseAssessment/">Copy URL</button><span class="copy-confirm">Copied</span></div></div></article>
+      </div>
+    </section>
+  </main>
 
-        <!-- Typing Assessment -->
-        <div class="assessment-card">
-            <h3>Typing Assessment</h3>
-            <p>Measures typing speed and accuracy through a 1-minute and a 5-minute test. Candidates have unlimited attempts to improve their scores, with highlights indicating errors and word progression. The goal is to achieve the highest possible words per minute (WPM) with accuracy. After completing both tests at least once, candidates can submit their best scores to Paramount.</p>
-            <div class="link-container">
-                <a href="https://hireparamount.eastus.cloudapp.azure.com/typingAssessment/" target="_blank" rel="noopener noreferrer">Access Typing Assessment</a>
-                <button class="copy-button" onclick="copyToClipboard('https://hireparamount.eastus.cloudapp.azure.com/typingAssessment/', this)">Copy Link</button>
-                <span class="tooltip">Copied!</span>
-            </div>
-        </div>
-
-        <!-- Computer Assessment -->
-        <div class="assessment-card">
-            <h3>Computer Assessment</h3>
-            <p>Evaluates essential computer skills, including navigation of video meetings, web browsers, and basic system settings. Candidates answer 25 questions with up to 3 attempts per question. Includes a sample question to familiarize candidates with the assessment format.</p>
-            <div class="link-container">
-                <a href="https://hireparamount.eastus.cloudapp.azure.com/computerAssessment/" target="_blank" rel="noopener noreferrer">Access Computer Assessment</a>
-                <button class="copy-button" onclick="copyToClipboard('https://hireparamount.eastus.cloudapp.azure.com/computerAssessment/', this)">Copy Link</button>
-                <span class="tooltip">Copied!</span>
-            </div>
-        </div>
-
-        <!-- Comprehension Assessment -->
-        <div class="assessment-card">
-            <h3>Comprehension Assessment</h3>
-            <p>Assesses understanding of key insurance concepts such as risk management, policy types, and policyholder responsibilities. Candidates receive a PDF study guide and must answer 30 questions based on the material. Each attempt offers a new set of questions, with up to three attempts allowed. Paramount will notify candidates if retakes are necessary.</p>
-            <div class="link-container">
-                <a href="https://hireparamount.eastus.cloudapp.azure.com/comprehensionAssessment/" target="_blank" rel="noopener noreferrer">Access Comprehension Assessment</a>
-                <button class="copy-button" onclick="copyToClipboard('https://hireparamount.eastus.cloudapp.azure.com/comprehensionAssessment/', this)">Copy Link</button>
-                <span class="tooltip">Copied!</span>
-            </div>
-        </div>
-
-        <!-- Sales & Customer Service Assessment -->
-        <div class="assessment-card">
-            <h3>Sales & Customer Service Assessment</h3>
-            <p>Consists of 14 multiple-choice questions that assess knowledge and skills relevant to sales and customer service roles.</p>
-            <div class="link-container">
-                <a href="https://hireparamount.eastus.cloudapp.azure.com/salesAssessment/" target="_blank" rel="noopener noreferrer">Access Sales & Customer Service Assessment</a>
-                <button class="copy-button" onclick="copyToClipboard('https://hireparamount.eastus.cloudapp.azure.com/salesAssessment/', this)">Copy Link</button>
-                <span class="tooltip">Copied!</span>
-            </div>
-        </div>
-
-        <!-- Internet Speed Test -->
-        <div class="assessment-card">
-            <h3>Internet Speed Test</h3>
-            <p>Check internet speed to ensure it meets the requirements for remote work performance.</p>
-            <div class="link-container">
-                <a href="https://speedtest.hireparamount.com/" target="_blank" rel="noopener noreferrer">Access Internet Speed Test</a>
-                <button class="copy-button" onclick="copyToClipboard('https://speedtest.hireparamount.com/', this)">Copy Link</button>
-                <span class="tooltip">Copied!</span>
-            </div>
-        </div>
-
-        <!-- Computer Diagnostic Tool -->
-        <div class="assessment-card">
-            <h3>Computer Diagnostic</h3>
-            <p>Analyzes computer specifications to verify compatibility with the technical requirements for remote work opportunities. Estimated completion time: 5–10 minutes.</p>
-            <div class="link-container">
-                <a href="https://www.hireparamount.com/computer-diagnostic" target="_blank" rel="noopener noreferrer">Access Computer Diagnostic Tool</a>
-                <button class="copy-button" onclick="copyToClipboard('https://www.hireparamount.com/computer-diagnostic', this)">Copy Link</button>
-                <span class="tooltip">Copied!</span>
-            </div>
-        </div>
-
-        <!-- Surveys Section -->
-        <div class="section-title">Surveys</div>
-
-        <!-- Candidate Survey -->
-        <div class="assessment-card">
-            <h3>Candidate Profile Survey</h3>
-            <p>A brief survey that helps us match candidates with the best opportunities. The survey includes questions about:</p>
-            <ul>
-                <li>Availability and work preferences</li>
-                <li>Call center experience and skills</li>
-                <li>Shift preferences and compensation expectations</li>
-                <li>Work history and computer availability</li>
-            </ul>
-            <br>
-            <div class="link-container">
-                <a href="https://survey.hireparamount.com/" target="_blank" rel="noopener noreferrer">Access Candidate Survey</a>
-                <button class="copy-button" onclick="copyToClipboard('https://survey.hireparamount.com/', this)">Copy Link</button>
-                <span class="tooltip">Copied!</span>
-            </div>
-        </div>
-
-        <!-- AEP Licensed Agent Survey -->
-        <div class="assessment-card">
-            <h3>AEP Licensed Agent Survey</h3>
-            <p>A pre-screening and booking flow for AEP licensed-agent candidates.</p>
-            <div class="link-container">
-                <a href="https://apply.hireparamount.com/" target="_blank" rel="noopener noreferrer">Access AEP Licensed Agent Survey</a>
-                <button class="copy-button" onclick="copyToClipboard('https://apply.hireparamount.com/', this)">Copy Link</button>
-                <span class="tooltip">Copied!</span>
-            </div>
-        </div>
-
-        <!-- Hub Section -->
-        <div class="section-title">Assessment Hubs</div>
-        <div class="assessment-card">
-            <h3>Sales & Customer Service Assessment Hub</h3>
-            <p>A comprehensive hub to complete and track all required assessments. This hub includes:</p>
-            <ul>
-                <li>Typing Assessment</li>
-                <li>Computer Assessment</li>
-                <li>Sales & Customer Service Assessment</li>
-                <li>Internet Speed Test</li>
-            </ul>
-            <div class="link-container">
-                <a href="https://hireparamount.eastus.cloudapp.azure.com/hub_salesAssessment/" target="_blank" rel="noopener noreferrer">Access Assessment Hub</a>
-                <button class="copy-button" onclick="copyToClipboard('https://hireparamount.eastus.cloudapp.azure.com/hub_salesAssessment/', this)">Copy Link</button>
-                <span class="tooltip">Copied!</span>
-            </div>
-        </div>
-
-        <div class="assessment-card">
-            <h3>License Agent Assessment Hub</h3>
-            <p>A comprehensive hub to complete and track all required assessments. This hub includes:</p>
-            <ul>
-                <li>Computer Assessment</li>
-                <li>Internet Speed Test</li>
-                <li>Comprehension Assessment</li>
-            </ul>
-            <div class="link-container">
-                <a href="https://hireparamount.eastus.cloudapp.azure.com/hub_licenseAssessment/" target="_blank" rel="noopener noreferrer">Access Assessment Hub</a>
-                <button class="copy-button" onclick="copyToClipboard('https://hireparamount.eastus.cloudapp.azure.com/hub_licenseAssessment/', this)">Copy Link</button>
-                <span class="tooltip">Copied!</span>
-            </div>
-        </div>
-    </main>
-
-    <script>
-        function copyToClipboard(link, button) {
-            navigator.clipboard.writeText(link).then(() => {
-                const tooltip = button.nextElementSibling;
-                tooltip.style.display = "inline";
-                setTimeout(() => {
-                    tooltip.style.display = "none";
-                }, 1500);
-            }).catch(err => {
-                console.error('Could not copy text: ', err);
-            });
-        }
-    </script>
+  <footer class="site-footer"><div class="footer-inner"><p>&copy; 2026 Paramount Staffing. All rights reserved.</p><div class="footer-links"><a href="https://www.hireparamount.com/">Main website</a><a href="mailto:support@hireparamount.com">Support</a></div></div></footer>
 </body>
 </html>
