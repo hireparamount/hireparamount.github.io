@@ -96,7 +96,9 @@
         containerId: 'candidateCards',
         services: [
           { name: 'Video Interview', url: 'https://videointerview.hireparamount.com/', checkUrl: 'https://videointerview.hireparamount.com/health', description: 'Candidate video interview recording and review.', kind: 'Assessment' },
-          { name: 'Solix Assessment Hub', url: 'https://solix-full.hireparamount.com/', checkUrl: 'https://solix-full.hireparamount.com/health', description: 'Primary Solix screening and assessment hub.', kind: 'Assessment' },
+          { name: 'Solix — Screening', url: 'https://solix.hireparamount.com/', checkUrl: 'https://solix.hireparamount.com/health', description: 'Core Solix screening flow (cold-starts on use).', kind: 'Assessment' },
+          { name: 'Solix — Screening + Survey', url: 'https://solix-survey.hireparamount.com/', checkUrl: 'https://solix-survey.hireparamount.com/health', description: 'Solix screening plus availability survey (cold-starts on use).', kind: 'Assessment' },
+          { name: 'Solix — Full', url: 'https://solix-full.hireparamount.com/', checkUrl: 'https://solix-full.hireparamount.com/health', description: 'Primary Solix hub: survey plus recorded video.', kind: 'Assessment' },
           { name: 'Attendance Hub', url: 'https://hireparamount.eastus.cloudapp.azure.com/attendanceHub/', checkUrl: 'https://hireparamount.eastus.cloudapp.azure.com/attendanceHub/api/health', description: 'Paramount team attendance automation and reporting.', kind: 'VM App' },
           { name: 'Internet Speed Test', url: 'https://speedtest.hireparamount.com/', checkUrl: 'https://speedtest.hireparamount.com/health', description: 'Candidate internet speed verification.', kind: 'Assessment' },
           { name: 'Typing Assessment', url: 'https://hireparamount.eastus.cloudapp.azure.com/typingAssessment/', checkUrl: 'https://hireparamount.eastus.cloudapp.azure.com/typingAssessment/health', description: 'Typing speed and accuracy test.', kind: 'VM App' },
@@ -174,6 +176,13 @@
         <span class="summary-pill">${totals.down} errors</span>`;
     }
 
+    function fetchWithTimeout(url, ms) {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), ms);
+      return fetch(url, { cache: 'no-store', mode: 'no-cors', signal: controller.signal })
+        .finally(() => clearTimeout(timeout));
+    }
+
     async function checkService(service) {
       if (service.manual) {
         totals.manual += 1;
@@ -182,16 +191,25 @@
         return;
       }
 
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 12000);
+      // Two attempts with a generous timeout: many services cold-start
+      // (App Service alwaysOn=false, Container Apps min-0) and a first hit
+      // can take 20s+. A single short timeout produced false "Offline" cards.
+      let response = null;
+      for (let attempt = 0; attempt < 2 && !response; attempt += 1) {
+        try {
+          response = await fetchWithTimeout(service.checkUrl, 25000);
+        } catch (error) {
+          if (attempt === 0) {
+            setStatus(service, 'warning', 'Retrying');
+            await new Promise((resolve) => setTimeout(resolve, 1500));
+          }
+        }
+      }
 
-      try {
-        const response = await fetch(service.checkUrl, { cache: 'no-store', mode: 'no-cors', signal: controller.signal });
-        clearTimeout(timeout);
+      if (response) {
         totals.running += 1;
         setStatus(service, 'running', response.type === 'opaque' ? 'Reachable' : 'Running');
-      } catch (error) {
-        clearTimeout(timeout);
+      } else {
         totals.down += 1;
         setStatus(service, 'down', 'Offline/Error');
       }
