@@ -8,8 +8,9 @@
     root.setAttribute('data-theme', theme);
     localStorage.setItem('paramount-theme', theme);
     document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
-      button.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+      button.dataset.themeState = theme;
       button.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+      button.setAttribute('title', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
     });
   }
 

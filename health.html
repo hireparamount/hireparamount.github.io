@@ -16,7 +16,7 @@
     <nav class="nav-bar" aria-label="Primary navigation">
       <a class="brand-link" href="index.html">
         <img src="images/paramount_logo.png" alt="Paramount logo">
-        <span><span class="brand-title">Paramount Tech</span><span class="brand-subtitle">Recruiting tools and status</span></span>
+        <span><span class="brand-title">Paramount Tech</span><span class="brand-subtitle">Team tools and status</span></span>
       </a>
       <ul class="nav-links">
         <li><a href="index.html" data-nav="home">Overview</a></li>
@@ -24,7 +24,7 @@
         <li><a href="health.html" data-nav="status">Status</a></li>
         <li><a href="executableProjects.html" data-nav="downloads">Downloads</a></li>
         <li><a href="privacyPolicy.html" data-nav="privacy">Privacy</a></li>
-        <li><button class="theme-toggle" type="button" data-theme-toggle>Dark mode</button></li>
+        <li><button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button></li>
       </ul>
     </nav>
   </header>
@@ -34,7 +34,7 @@
       <div class="hero-content">
         <p class="eyebrow">Live Operations</p>
         <h1>System status without the false alarms.</h1>
-        <p>Checks the public URLs recruiters use every day. Services that block browser health reads are treated as reachable when the network request succeeds.</p>
+        <p>Checks the public URLs Paramount team members use every day. Services that block browser health reads are treated as reachable when the network request succeeds.</p>
         <div class="hero-actions">
           <button id="refreshButton" class="btn primary" type="button">Refresh all checks</button>
           <a class="btn secondary" href="assessmentPortal.html">Open assessment links</a>
@@ -67,7 +67,7 @@
       <div class="section-header">
         <div>
           <h2>Internal Tools</h2>
-          <p>Recruiter and operations tools, including services without public health endpoints.</p>
+          <p>Paramount team tools, including services without public health endpoints.</p>
         </div>
       </div>
       <div id="internalCards" class="status-grid"></div>
@@ -97,7 +97,7 @@
         services: [
           { name: 'Video Interview', url: 'https://videointerview.hireparamount.com/', checkUrl: 'https://videointerview.hireparamount.com/health', description: 'Candidate video interview recording and review.', kind: 'Assessment' },
           { name: 'Solix Assessment Hub', url: 'https://solix-full.hireparamount.com/', checkUrl: 'https://solix-full.hireparamount.com/health', description: 'Primary Solix screening and assessment hub.', kind: 'Assessment' },
-          { name: 'Attendance Hub', url: 'https://hireparamount.eastus.cloudapp.azure.com/attendanceHub/', checkUrl: 'https://hireparamount.eastus.cloudapp.azure.com/attendanceHub/api/health', description: 'Recruiter attendance automation and reporting.', kind: 'VM App' },
+          { name: 'Attendance Hub', url: 'https://hireparamount.eastus.cloudapp.azure.com/attendanceHub/', checkUrl: 'https://hireparamount.eastus.cloudapp.azure.com/attendanceHub/api/health', description: 'Paramount team attendance automation and reporting.', kind: 'VM App' },
           { name: 'Internet Speed Test', url: 'https://speedtest.hireparamount.com/', checkUrl: 'https://speedtest.hireparamount.com/health', description: 'Candidate internet speed verification.', kind: 'Assessment' },
           { name: 'Typing Assessment', url: 'https://hireparamount.eastus.cloudapp.azure.com/typingAssessment/', checkUrl: 'https://hireparamount.eastus.cloudapp.azure.com/typingAssessment/health', description: 'Typing speed and accuracy test.', kind: 'VM App' },
           { name: 'Computer Assessment', url: 'https://hireparamount.eastus.cloudapp.azure.com/computerAssessment/', checkUrl: 'https://hireparamount.eastus.cloudapp.azure.com/computerAssessment/health', description: 'Basic computer-literacy assessment.', kind: 'VM App' },
@@ -106,14 +106,18 @@
           { name: 'Sales Assessment Hub', url: 'https://hireparamount.eastus.cloudapp.azure.com/hub_salesAssessment/', checkUrl: 'https://hireparamount.eastus.cloudapp.azure.com/hub_salesAssessment/health', description: 'Bundled assessment hub for sales roles.', kind: 'VM App' },
           { name: 'License Agent Hub', url: 'https://hireparamount.eastus.cloudapp.azure.com/hub_licenseAssessment/', checkUrl: 'https://hireparamount.eastus.cloudapp.azure.com/hub_licenseAssessment/health', description: 'Bundled assessment hub for license-agent roles.', kind: 'VM App' },
           { name: 'Candidate Survey', url: 'https://survey.hireparamount.com/', checkUrl: 'https://survey.hireparamount.com/health', description: 'Candidate profile and preference survey.', kind: 'Survey' },
-          { name: 'AEP Licensed Agent Survey', url: 'https://apply.hireparamount.com/', checkUrl: 'https://apply.hireparamount.com/', description: 'AEP pre-screening and booking flow.', kind: 'Survey' },
+          { name: 'AEP Licensed Agent Survey', url: 'https://apply.hireparamount.com/', checkUrl: 'https://apply.hireparamount.com/api/health', description: 'AEP pre-screening and booking flow.', kind: 'Survey' },
+          { name: 'Employment Verification', url: 'https://paramount-employment-app.azurewebsites.net/', checkUrl: 'https://paramount-employment-app.azurewebsites.net/health', description: 'Candidate employment verification submissions.', kind: 'Verification' },
           { name: 'Computer Diagnostic', url: 'https://www.hireparamount.com/computer-diagnostic', checkUrl: 'https://www.hireparamount.com/computer-diagnostic', description: 'Download page for the computer diagnostic tool.', kind: 'Download' }
         ]
       },
       {
         containerId: 'internalCards',
         services: [
-          { name: 'CST Portal', url: 'https://cst.hireparamount.com/', checkUrl: 'https://cst.hireparamount.com/health', description: 'Client services and operations portal.', kind: 'Internal' },
+          { name: 'CST Portal', url: 'https://cst.hireparamount.com/', checkUrl: 'https://cst.hireparamount.com/api/health', description: 'Client services and operations portal.', kind: 'Internal' },
+          { name: 'PIN Badge System', url: 'https://pin.hireparamount.com/', checkUrl: 'https://pin.hireparamount.com/api/health', description: 'NFC conference badge issuing and contact profiles.', kind: 'Badge' },
+          { name: 'Resume Formatter', url: 'https://paramount-resume-formatter-app.azurewebsites.net/', checkUrl: 'https://paramount-resume-formatter-app.azurewebsites.net/health', description: 'Reformats candidate resumes into the Paramount template.', kind: 'Internal' },
+          { name: 'Bullhorn Job Open Report', url: 'https://paramount-bullhorn-reporter-app.azurewebsites.net/', checkUrl: 'https://paramount-bullhorn-reporter-app.azurewebsites.net/health', description: 'Reporting on open Bullhorn job orders.', kind: 'Report' },
           { name: 'Duplicate Candidates', url: '', description: 'Desktop/script automation. No public health endpoint.', kind: 'Script', manual: true },
           { name: 'Tearsheet Automation', url: '', description: 'Desktop/script automation. No public health endpoint.', kind: 'Script', manual: true }
         ]
@@ -126,13 +130,26 @@
       return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
     }
 
+    const kindClass = {
+      API: 'is-teal',
+      Assessment: 'is-blue',
+      'VM App': 'is-pink',
+      Survey: 'is-peach',
+      Download: 'is-green',
+      Verification: 'is-teal',
+      Badge: 'is-pink',
+      Report: 'is-peach',
+      Internal: '',
+      Script: ''
+    };
+
     function createCard(service) {
       const id = idFor(service.name);
       const card = document.createElement('article');
       card.className = 'card status-card';
       card.innerHTML = `
         <div class="card-body">
-          <div class="tag-row"><span class="tag">${service.kind}</span></div>
+          <div class="tag-row"><span class="tag ${kindClass[service.kind] || ''}">${service.kind}</span></div>
           <h3>${service.name}</h3>
           <p>${service.description}</p>
           <div class="status-footer">
