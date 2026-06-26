@@ -16,7 +16,7 @@
     <nav class="nav-bar" aria-label="Primary navigation">
       <a class="brand-link" href="index.html">
         <img src="images/paramount_logo.png" alt="Paramount logo">
-        <span><span class="brand-title">Paramount Tech</span><span class="brand-subtitle">Recruiting tools and status</span></span>
+        <span><span class="brand-title">Paramount Tech</span><span class="brand-subtitle">Team tools and status</span></span>
       </a>
       <ul class="nav-links">
         <li><a href="index.html" data-nav="home">Overview</a></li>
@@ -24,7 +24,7 @@
         <li><a href="health.html" data-nav="status">Status</a></li>
         <li><a href="executableProjects.html" data-nav="downloads">Downloads</a></li>
         <li><a href="privacyPolicy.html" data-nav="privacy">Privacy</a></li>
-        <li><button class="theme-toggle" type="button" data-theme-toggle>Dark mode</button></li>
+        <li><button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button></li>
       </ul>
     </nav>
   </header>
@@ -32,9 +32,9 @@
   <main id="main" class="site-shell">
     <section class="hero">
       <div class="hero-content">
-        <p class="eyebrow">Internal Tech Portal</p>
-        <h1>One place for Paramount recruiting tools.</h1>
-        <p>Quickly open assessment links, copy candidate URLs, check production status, and download the desktop tools used by recruiters and operations.</p>
+        <p class="eyebrow">Paramount Team Portal</p>
+        <h1>One place for Paramount tech tools.</h1>
+        <p>Open assessment links, copy candidate URLs, check production status, and download the desktop tools the team uses.</p>
         <div class="hero-actions">
           <a class="btn primary" href="assessmentPortal.html">Copy assessment URLs</a>
           <a class="btn secondary" href="health.html">View system status</a>
@@ -45,46 +45,32 @@
     <section class="section">
       <div class="section-header">
         <div>
-          <h2>What Needs Updating</h2>
-          <p>The portal now has a shared UI, but the VM-hosted path apps still use the Azure hostname because no custom subdomains are documented or resolving for them.</p>
-        </div>
-      </div>
-      <div class="grid">
-        <article class="card"><div class="card-body"><span class="tag">Done</span><h3>Custom domains</h3><p>Video Interview, Speed Test, Survey, AEP, Solix, CST, and API use branded domains where available.</p></div></article>
-        <article class="card"><div class="card-body"><span class="tag">Watch</span><h3>VM assessment URLs</h3><p>Typing, computer, comprehension, sales, attendance, and legacy hubs are still path-based under the Azure VM hostname.</p></div></article>
-        <article class="card"><div class="card-body"><span class="tag">Next</span><h3>Client-ready polish</h3><p>The new layout is cleaner for internal use and can evolve into a client-facing showcase with case studies and screenshots.</p></div></article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-header">
-        <div>
-          <h2>Fast Actions</h2>
-          <p>Most common workflows for recruiters and operations.</p>
+          <h2>Jump in</h2>
+          <p>The three things the team reaches for most.</p>
         </div>
       </div>
       <div class="grid">
         <article class="card">
           <div class="card-body">
-            <div class="tag-row"><span class="tag">Links</span></div>
+            <div class="tag-row"><span class="tag is-blue">Links</span></div>
             <h3>Assessment Portal</h3>
-            <p>Open and copy every active assessment, survey, and candidate-facing tool URL.</p>
+            <p>Open and copy every active assessment, survey, and candidate-facing URL.</p>
             <div class="link-actions"><a class="btn primary" href="assessmentPortal.html">Open assessments</a></div>
           </div>
         </article>
         <article class="card">
           <div class="card-body">
-            <div class="tag-row"><span class="tag">Status</span></div>
+            <div class="tag-row"><span class="tag is-green">Status</span></div>
             <h3>System Status</h3>
-            <p>Check reachable services and identify tools that require manual verification.</p>
+            <p>See which services are reachable and which need a manual check.</p>
             <div class="link-actions"><a class="btn primary" href="health.html">Check status</a></div>
           </div>
         </article>
         <article class="card">
           <div class="card-body">
-            <div class="tag-row"><span class="tag">Downloads</span></div>
+            <div class="tag-row"><span class="tag is-peach">Downloads</span></div>
             <h3>Desktop Tools</h3>
-            <p>Download computer diagnostics and internal executable utilities.</p>
+            <p>Computer diagnostics and internal executable utilities.</p>
             <div class="link-actions"><a class="btn primary" href="executableProjects.html">View downloads</a></div>
           </div>
         </article>
@@ -112,7 +98,7 @@
       <div class="section-header">
         <div>
           <h2>Diagnostic Troubleshooting</h2>
-          <p>Common issues recruiters may need to explain to candidates.</p>
+          <p>Common issues Paramount team members may need to explain to candidates.</p>
         </div>
       </div>
       <ul class="screenshot-list">
