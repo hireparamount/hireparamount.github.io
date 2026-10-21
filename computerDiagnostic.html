@@ -49,8 +49,8 @@
       <div class="content-panel download-card">
         <div>
           <h3>Paramount Computer Diagnostics</h3>
-          <p class="last-updated">Last updated: June 26, 2026</p>
-          <p>Estimated completion time is 5 to 10 minutes. Candidates should use the same email address that received the invitation.</p>
+          <p class="last-updated">Version 1.1 &middot; Last updated: October 21, 2026</p>
+          <p>Estimated completion time is 5 to 10 minutes. Candidates enter their email address twice and should use the same address that received the invitation.</p>
         </div>
         <a class="btn primary" href="/executables/Paramount Computer Diagnostics.exe" download="Paramount Computer Diagnostics.exe">Download app</a>
       </div>
@@ -60,8 +60,25 @@
       <div class="section-header"><div><h2>Troubleshooting</h2><p>Common errors candidates hit in the app, and what to tell them.</p></div></div>
       <ul class="screenshot-list">
         <li class="card"><div class="card-body"><h3>No Internet Connection</h3><p>Ask the candidate to check their connection, hardwire if possible, and relaunch the app.</p><img src="/images/troubleshooting_no_internet.png" alt="No internet connection diagnostic error"></div></li>
-        <li class="card"><div class="card-body"><h3>Incorrect Email</h3><p>Ask the candidate to retry using the email address associated with their Paramount application.</p><img src="/images/troubleshooting_incorrect_email.png" alt="Incorrect email diagnostic error"></div></li>
+        <li class="card"><div class="card-body"><h3>Email Addresses Do Not Match</h3><p>The app shows "The email addresses do not match!" when the two email boxes differ. Ask the candidate to type the same address in both, using the one that received the invitation. Capital letters and extra spaces do not matter.</p></div></li>
+        <li class="card"><div class="card-body"><h3>Error Submitting</h3><p>The app shows "Error Submitting! Please try again." when the results could not be saved. Ask the candidate to check their connection and press Submit again. They do not need to rerun the scan.</p></div></li>
       </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-header"><div><h2>Version History</h2><p>Changes to the app candidates download from this page.</p></div></div>
+      <div class="content-panel">
+        <h3>Version 1.1 &middot; October 21, 2026</h3>
+        <ul>
+          <li>Results now save directly to Paramount's systems. The email address no longer has to match an existing record before the scan can start.</li>
+          <li>Candidates type their email address twice to catch typos.</li>
+          <li>The app only reports "Submitted Successfully" once the results are saved, and shows an error the candidate can retry if they are not.</li>
+        </ul>
+        <h3>Version 1.0 &middot; June 26, 2026</h3>
+        <ul>
+          <li>Rebuilt on Python 3.13, with more reliable network checks and total RAM reporting.</li>
+        </ul>
+      </div>
     </section>
 
     <section id="privacy" class="section content-panel">
