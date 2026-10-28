@@ -49,7 +49,7 @@
       <div class="content-panel download-card">
         <div>
           <h3>Paramount Computer Diagnostics</h3>
-          <p class="last-updated">Version 1.4 &middot; Last updated: October 22, 2026</p>
+          <p class="last-updated">Version 1.5 &middot; Last updated: October 28, 2026</p>
           <p>Estimated completion time is 5 to 10 minutes. Candidates enter their email address twice and should use the same address that received the invitation.</p>
         </div>
         <a class="btn primary" href="/executables/Paramount Computer Diagnostics.exe" download="Paramount Computer Diagnostics.exe">Download app</a>
@@ -68,6 +68,14 @@
     <section class="section">
       <div class="section-header"><div><h2>Version History</h2><p>Changes to the app candidates download from this page.</p></div></div>
       <div class="content-panel">
+        <h3>Version 1.5 &middot; October 28, 2026</h3>
+        <ul>
+          <li>Internet speed is now measured against a nearby server. Earlier versions measured against a server in Brazil, which made fast connections look much slower than they are, especially for download speed.</li>
+          <li>The app now checks connection quality as well as speed: ping, jitter and packet loss, both on a quiet line and while the speed test is running.</li>
+          <li>A second tab, "Security and setup", shows the new readings: whether the antivirus is switched on and up to date, Windows Update, whether Windows is activated and 64-bit, the firewall, whether the computer is managed by a work or school, whether a VPN is connected, whether Wi-Fi is on, and whether a USB or Bluetooth headset is plugged in.</li>
+          <li>Several clients require these, so candidates no longer need to send screenshots for most of them.</li>
+        </ul>
+
         <h3>Version 1.4 &middot; October 22, 2026</h3>
         <ul>
           <li>Internal change only. The app now sends its access token in a request header rather than in the web address, so the token is no longer written into the service logs on every submission.</li>
@@ -106,13 +114,16 @@
       <p>Our commitment to your privacy is paramount. This Privacy Policy explains how Paramount Computer Diagnostic collects, uses, and protects information.</p>
 
       <h3>Information Collection and Use</h3>
-      <p>Paramount Computer Diagnostic collects data from your device to assess job compatibility and update your Bullhorn profile. The specific information collected includes:</p>
+      <p>Paramount Computer Diagnostic collects data from your device to check it against the requirements of the work-at-home job you applied for. Results are saved to Paramount's own systems under the email address you enter, and may later be added to your candidate record with us. The app shows you everything it sends before you press Submit. The specific information collected includes:</p>
       <ul>
-        <li><strong>System Hardware Details:</strong> Windows version, machine type, active monitors and their screen sizes, free and total RAM, CPU type, processor, cores, hard-drive availability, and antivirus information.</li>
-        <li><strong>Network Information:</strong> Download and upload speeds, network connection type, and network provider.</li>
-        <li><strong>Audio and Video Input Devices:</strong> Microphone availability and camera availability.</li>
-        <li><strong>Bullhorn Integration:</strong> Collected data may be integrated into your Bullhorn profile using the email address registered with Paramount.</li>
+        <li><strong>System Hardware Details:</strong> Windows version, edition and build, whether it is 64-bit and activated, machine type and model, active monitors with their screen sizes, free, installed and usable RAM, CPU type, processor, cores, disks (size, free space, SSD or hard drive), and graphics.</li>
+        <li><strong>Security and Updates:</strong> Installed antivirus products and whether each is switched on and up to date, when Windows Defender last scanned, whether Windows Update is on and when it last installed an update, firewall, disk encryption, Secure Boot, and how soon the screen locks when left.</li>
+        <li><strong>Setup:</strong> Whether your account can install software, and whether the computer is managed by a work or school.</li>
+        <li><strong>Network Information:</strong> Download and upload speeds, ping, jitter and packet loss, network connection type (wired, Wi-Fi, cellular), whether Wi-Fi is switched on, whether a VPN or proxy is in use, network provider, public IP address and the approximate city it belongs to.</li>
+        <li><strong>Audio and Video Devices:</strong> Microphone, camera, headset, keyboard and mouse availability, and whether they connect by USB or Bluetooth.</li>
+        <li><strong>Selected Software:</strong> Installed web browsers and their versions, and whether VPN, remote-access or call-centre software is installed. The app does not list other software.</li>
       </ul>
+      <p>The app does not read your files, browsing history, messages, passwords, or Wi-Fi network names.</p>
 
       <h3>Information Sharing and Disclosure</h3>
       <p>The collected data is used to evaluate candidate eligibility for specific job positions and is not shared with third parties outside the organization, except as necessary to fulfill job-related requests.</p>
@@ -125,6 +136,7 @@
 
       <h3>Links to Other Sites</h3>
       <p>Paramount Computer Diagnostic contains one link to an external site: the app's help/support page, maintained by Paramount.</p>
+      <p>To measure your connection the app exchanges test data with Cloudflare (speed.cloudflare.com and 1.1.1.1), and looks up your network provider with ipinfo.io. Those services see your public IP address, as any website you visit does.</p>
     </section>
   </main>
 
