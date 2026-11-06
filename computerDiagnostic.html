@@ -50,7 +50,7 @@
       <div class="content-panel download-card">
         <div>
           <h3>Paramount Computer Diagnostics</h3>
-          <p class="last-updated">Version 1.6 &middot; Last updated: November 4, 2026</p>
+          <p class="last-updated">Version 1.7 &middot; Last updated: November 6, 2026</p>
           <p>The check takes about 2 minutes once the app is open.</p>
           <ol>
             <li>Download the app and open it.</li>
@@ -59,6 +59,8 @@
             <li>Press Start and keep the window open while it checks.</li>
             <li>If anything needs fixing, the app says what and how. Fix what you can, press Check again, then press Send results.</li>
           </ol>
+          <p><strong>Is this safe?</strong> The app is signed by Paramount Staffing, LLC, so Windows names us as the publisher. It runs once and leaves nothing running. It needs no administrator rights and does not read your files, browsing, messages or passwords. It saves only your recruiter code on your computer. The Privacy Policy below lists what it reads and what it sends. Your results are saved with Paramount only when you press Send results. If you entered a recruiter code, your readings go to our readiness service first to build your checklist, and are not saved there.</p>
+          <p><strong>Will it run on my computer?</strong> It needs 64-bit Windows 10 or 11. It will not open on 32-bit Windows or in Windows S mode: to leave S mode, open Settings, System, Activation, and switch out of S mode, which is free. On an ARM laptop it runs, but many work programs do not, so ask your recruiter. On a Mac or Chromebook, use the <a href="https://readiness.hireparamount.com/check">browser check</a> instead, then tell your recruiter which computer you have.</p>
         </div>
         <a class="btn primary" href="/executables/Paramount Computer Diagnostics.exe" download="Paramount Computer Diagnostics.exe">Download app</a>
       </div>
@@ -77,6 +79,16 @@
     <section class="section">
       <div class="section-header"><div><h2>Version History</h2><p>Changes to the app candidates download from this page.</p></div></div>
       <div class="content-panel">
+        <h3>Version 1.7 &middot; November 6, 2026</h3>
+        <ul>
+          <li>The check now reads how busy the processor is on a quiet moment, and whether the computer has a TPM security chip.</li>
+          <li>Wi-Fi reads the radio itself, so a radio that is on but not connected now shows as on.</li>
+          <li>Ping is also sampled to a second address, because some client tools use it.</li>
+          <li>The app sends less. It no longer sends device names, network adapter names, lists of VPN or call-centre software, Windows Update titles, install or start-up dates, your city, or your network name.</li>
+          <li>Printers and scanners are no longer counted as webcams.</li>
+          <li>If the speed test cannot run, the app says it could not tell. It no longer falls back to the old test that used servers in Brazil.</li>
+        </ul>
+
         <h3>Version 1.6 &middot; November 4, 2026</h3>
         <ul>
           <li>Everything now happens in one window: start, checking, results, sent. Mistakes such as mismatched email addresses are shown under the box instead of in a pop-up.</li>
@@ -134,14 +146,15 @@
       <p>Our commitment to your privacy is paramount. This Privacy Policy explains how Paramount Computer Diagnostic collects, uses, and protects information.</p>
 
       <h3>Information Collection and Use</h3>
-      <p>Paramount Computer Diagnostic collects data from your device to check it against the requirements of the work-at-home job you applied for. Results are saved to Paramount's own systems under the email address you enter, and may later be added to your candidate record with us. The app shows you everything it sends before you press Submit. The specific information collected includes:</p>
+      <p>Paramount Computer Diagnostic collects data from your device to check it against the requirements of the work-at-home job you applied for. Results are saved to Paramount's own systems under the email address you enter, and may later be added to your candidate record with us. Press "See what we found" before you send to see the main readings. The app also sends the other details listed here. Your results are saved only when you press Send results. Before that, a short note says a check started or stopped, and if you entered a code your readings are checked by our readiness service. The specific information collected includes:</p>
       <ul>
-        <li><strong>System Hardware Details:</strong> Windows version, edition and build, whether it is 64-bit and activated, machine type and model, active monitors with their screen sizes, free, installed and usable RAM, CPU type, processor, cores, disks (size, free space, SSD or hard drive), and graphics.</li>
+        <li><strong>System Hardware Details:</strong> Windows version, edition and build, whether it is 64-bit and activated, machine type and model, active monitors with their screen sizes, free, installed and usable RAM, CPU type, processor, cores, disks (size, free space, SSD or hard drive), graphics, how busy the processor is, how long since the computer started, whether it is on battery, whether it has a TPM security chip and which version, and the display language of Windows.</li>
         <li><strong>Security and Updates:</strong> Installed antivirus products and whether each is switched on and up to date, when Windows Defender last scanned, whether Windows Update is on and when it last installed an update, firewall, disk encryption, Secure Boot, and how soon the screen locks when left.</li>
         <li><strong>Setup:</strong> Whether your account can install software, and whether the computer is managed by a work or school.</li>
-        <li><strong>Network Information:</strong> Download and upload speeds, ping, jitter and packet loss, network connection type (wired, Wi-Fi, cellular), whether Wi-Fi is switched on, whether a VPN or proxy is in use, network provider, public IP address and the approximate city it belongs to.</li>
+        <li><strong>Network Information:</strong> Download and upload speeds, ping, jitter and packet loss, network connection type (wired, Wi-Fi, cellular), whether the Wi-Fi radio is on, whether a VPN or proxy is in use, how fast the network adapter links, network provider, public IP address, the country, state and time zone that address belongs to, and your computer's time zone offset. We collect the state because some clients can only hire in certain states. An internet address shows only roughly where you are, so a recruiter reviews it.</li>
         <li><strong>Audio and Video Devices:</strong> Microphone, camera, headset, keyboard and mouse availability, and whether they connect by USB or Bluetooth.</li>
-        <li><strong>Selected Software:</strong> Installed web browsers and their versions, and whether VPN, remote-access or call-centre software is installed. The app does not list other software.</li>
+        <li><strong>Selected Software:</strong> Installed web browsers and their versions, installed remote-access software, whether a known remote-access tool is running now, and whether this is a remote desktop session. The app does not list other software, and it does not send a list of running programs.</li>
+        <li><strong>About the Run:</strong> The app version, a random number for each run, how long each step took, and any errors. A short note with your email address is sent when a check starts, and when it stops early, so we can see where people get stuck.</li>
       </ul>
       <p>The app does not read your files, browsing history, messages, passwords, or Wi-Fi network names.</p>
 
@@ -157,7 +170,7 @@
       <h3>Links to Other Sites</h3>
       <p>Paramount Computer Diagnostic contains one link to an external site: the app's help/support page, maintained by Paramount.</p>
       <p>If you enter a code from your recruiter, the code is saved with your results, and your readings are sent to Paramount's readiness service (readiness.hireparamount.com) to check them against the job's requirements. The code is also remembered on your computer so you do not have to type it again.</p>
-      <p>To measure your connection the app exchanges test data with Cloudflare (speed.cloudflare.com and 1.1.1.1), and looks up your network provider with ipinfo.io. Those services see your public IP address, as any website you visit does.</p>
+      <p>To measure your connection the app exchanges test data with Cloudflare (speed.cloudflare.com and 1.1.1.1), pings Google (8.8.8.8), and looks up your network provider with ipinfo.io. Those services see your public IP address, as any website you visit does.</p>
     </section>
   </main>
 
